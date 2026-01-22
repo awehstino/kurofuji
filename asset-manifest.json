@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/my_portfolio/static/css/main.34321e43.css",
-    "main.js": "/my_portfolio/static/js/main.2f6c241a.js",
-    "static/js/453.15a626a8.chunk.js": "/my_portfolio/static/js/453.15a626a8.chunk.js",
-    "static/media/IMG_20230916_102030.jpg": "/my_portfolio/static/media/IMG_20230916_102030.cb61c6b28b115afd7741.jpg",
-    "static/media/IMG_20230204_170914.jpg": "/my_portfolio/static/media/IMG_20230204_170914.b04a2e5a5540b717dfe6.jpg",
-    "static/media/cresta.png": "/my_portfolio/static/media/cresta.df8ec8bce3737bf896cc.png",
-    "static/media/reel.png": "/my_portfolio/static/media/reel.e3b59b228e2549d8b729.png",
-    "static/media/rminter.png": "/my_portfolio/static/media/rminter.3c430719ce6bace1ccf8.png",
-    "static/media/crm.png": "/my_portfolio/static/media/crm.760dcbb70fc7ebc400ea.png",
-    "static/media/IMG-20221204-WA0008.jpg": "/my_portfolio/static/media/IMG-20221204-WA0008.48897e264e510cfef6f3.jpg",
-    "static/media/timesheet.png": "/my_portfolio/static/media/timesheet.70a650a14df2f8b9ee2a.png",
-    "static/media/IMG-20221204-WA0010.jpg": "/my_portfolio/static/media/IMG-20221204-WA0010.2ae513fbab4dddeb3a31.jpg",
-    "static/media/Augustineawehjohn.pdf": "/my_portfolio/static/media/Augustineawehjohn.eb92d0d6ae98277d0984.pdf",
-    "static/media/IMG-20230916-WA0096.jpg": "/my_portfolio/static/media/IMG-20230916-WA0096.d5f7d38608cebe242eea.jpg",
-    "static/media/lucho.jpg": "/my_portfolio/static/media/lucho.d3c9e811016cbbfcd52a.jpg",
-    "index.html": "/my_portfolio/index.html",
-    "main.34321e43.css.map": "/my_portfolio/static/css/main.34321e43.css.map",
-    "main.2f6c241a.js.map": "/my_portfolio/static/js/main.2f6c241a.js.map",
-    "453.15a626a8.chunk.js.map": "/my_portfolio/static/js/453.15a626a8.chunk.js.map"
+    "main.css": "/kurofuji/static/css/main.34321e43.css",
+    "main.js": "/kurofuji/static/js/main.49cdb06d.js",
+    "static/js/453.088a6b9d.chunk.js": "/kurofuji/static/js/453.088a6b9d.chunk.js",
+    "static/media/IMG_20230916_102030.jpg": "/kurofuji/static/media/IMG_20230916_102030.cb61c6b28b115afd7741.jpg",
+    "static/media/IMG_20230204_170914.jpg": "/kurofuji/static/media/IMG_20230204_170914.b04a2e5a5540b717dfe6.jpg",
+    "static/media/cresta.png": "/kurofuji/static/media/cresta.df8ec8bce3737bf896cc.png",
+    "static/media/reel.png": "/kurofuji/static/media/reel.e3b59b228e2549d8b729.png",
+    "static/media/rminter.png": "/kurofuji/static/media/rminter.3c430719ce6bace1ccf8.png",
+    "static/media/crm.png": "/kurofuji/static/media/crm.760dcbb70fc7ebc400ea.png",
+    "static/media/IMG-20221204-WA0008.jpg": "/kurofuji/static/media/IMG-20221204-WA0008.48897e264e510cfef6f3.jpg",
+    "static/media/timesheet.png": "/kurofuji/static/media/timesheet.70a650a14df2f8b9ee2a.png",
+    "static/media/IMG-20221204-WA0010.jpg": "/kurofuji/static/media/IMG-20221204-WA0010.2ae513fbab4dddeb3a31.jpg",
+    "static/media/Augustineawehjohn.pdf": "/kurofuji/static/media/Augustineawehjohn.eb92d0d6ae98277d0984.pdf",
+    "static/media/IMG-20230916-WA0096.jpg": "/kurofuji/static/media/IMG-20230916-WA0096.d5f7d38608cebe242eea.jpg",
+    "static/media/lucho.jpg": "/kurofuji/static/media/lucho.d3c9e811016cbbfcd52a.jpg",
+    "index.html": "/kurofuji/index.html",
+    "main.34321e43.css.map": "/kurofuji/static/css/main.34321e43.css.map",
+    "main.49cdb06d.js.map": "/kurofuji/static/js/main.49cdb06d.js.map",
+    "453.088a6b9d.chunk.js.map": "/kurofuji/static/js/453.088a6b9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34321e43.css",
-    "static/js/main.2f6c241a.js"
+    "static/js/main.49cdb06d.js"
   ]
 }
