@@ -1,0 +1,20 @@
+#footer {
+    position: relative;
+    overflow: hidden;
+    cursor: none; /* Optional: Hide default cursor inside footer */
+}
+
+.footer__cursor {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--color-bg);
+    background: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.1s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 10;
+    mix-blend-mode: difference;
+}
