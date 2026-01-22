@@ -3,25 +3,68 @@ import "./header.css"
 import Btn from './Btn'
 import Me from "../../assets/IMG-20221204-WA0008.jpg"
 import Headersocials from './Headersocials'
+import { TypeAnimation } from 'react-type-animation';
+
 const Header = () => {
   return (
-    <header>
-       <div className=" container header_container">
-       <h5 >Hello i`m</h5>
-        <h1 >Augustine John</h1>
-        <h5 className="text-light">Front-End Developer</h5>
-        <Btn/>
-        <Headersocials/>
-          <div className="me">
-           <img  src={Me} alt="" className='ME' />
-          </div>
-           <a  href="#footer" className='scroll_down'>scrolldown</a> 
-      
-    </div>
-        
-    </header>
+    <header id="home">
+      <div className="container header_container">
+        <div className="header__intro">
+          <h5>Hello I'm</h5>
+          <h1>Augustine John</h1>
+          <h5 className="text-light">
+            <TypeAnimation
+              sequence={[
+                'Front-End Developer',
+                2000,
+                'Back-End Developer',
+                2000,
+                'React Developer',
+                2000,
+                'App Developer',
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </h5>
+          <Btn />
+        </div>
 
-  )
-}
+        <Headersocials />
+
+        <div className="me">
+          {/* Orbital Rings with Dots */}
+          <div className="ring one">
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+          </div>
+          <div className="ring two">
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+          </div>
+          <div className="ring three">
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+          </div>
+          
+          {/* Centered Circular Image */}
+          <div className="me-image">
+            <img src={Me} alt="Augustine John" className="ME" />
+          </div>
+        </div>
+
+        <a href="#footer" className="scroll_down">Scroll Down</a>
+      </div>
+    </header>
+  );
+};
 
 export default Header

@@ -1,0 +1,91 @@
+/* Default theme (the user calls this "light mode") */
+body.light {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+}
+
+/* Alternative dark theme */
+body.dark {
+  --color-bg: #0e0e16;
+  --color-bg-variant: #1a1a2e;
+  --color-primary: #00c6ff;
+  --color-primary-variant: rgba(0, 198, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+}
+
+.switch-theme-mode {
+  position: fixed;
+  right: 5%;
+  top: 2.5%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 50%;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  transition: all 400ms ease;
+}
+
+.switch-theme-mode:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* Theme Switcher Rings */
+.theme-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-variant);
+  pointer-events: none;
+}
+
+.theme-ring.one {
+  width: 140%;
+  height: 140%;
+  animation: theme-rotate 10s linear infinite;
+}
+
+.theme-ring.two {
+  width: 180%;
+  height: 180%;
+  animation: theme-rotate 15s linear infinite reverse;
+}
+
+.theme-ring.three {
+  width: 220%;
+  height: 220%;
+  animation: theme-rotate 20s linear infinite;
+}
+
+.theme-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+@keyframes theme-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

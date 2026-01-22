@@ -11,18 +11,18 @@ import 'swiper/css/pagination';
 
 const Testimonials = () => {
   let reviews = [{
-  name : "lucho",
+  name : "Lucho",
   img : lucho,
-  paragraph :"agustine john es un increíble desarrollador front-end."
+  paragraph :"Augustine John is an exceptional Front-End Developer. His technical skills and dedication to delivering high-quality results are truly impressive."
    },
    {
-    name : "Faith akpan",
+    name : "Faith Akpan",
     img : faith,
-    paragraph :"Augustine john he is an awesome front-end  developer."
+    paragraph :"Working with Augustine was a great experience. He is a talented developer who brings creativity and precision to every project."
      }
   ]
   return (
-    <section >
+    <section id="testimonials">
       <h5 >Review from partners</h5>
       <h2 >Testimonials</h2>
       <Swiper  className="container testimony_container"   modules={[ Pagination]}
@@ -33,6 +33,7 @@ const Testimonials = () => {
         {reviews.map(({name,img,paragraph},index)=>{
           return (
             <SwiperSlide className="testimonial" key={index}>
+          <div className="card-border"></div>
           <div className="partner_avatar">
             <img src={img} alt="" />
           </div>

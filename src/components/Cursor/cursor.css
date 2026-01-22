@@ -1,0 +1,82 @@
+/* Hide the default system cursor for a custom experience */
+/* body, a {
+  cursor: none;
+} */
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  /* transform is set by JS */
+  transition: transform 0.15s ease-out, width 0.3s ease, height 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* State when hovering over a link */
+.cursor.hover {
+  width: 70px;
+  height: 70px;
+}
+
+/* State when mouse is clicked */
+.cursor.click {
+  width: 45px;
+  height: 45px;
+  transition: width 0.1s ease, height 0.1s ease, border-width 0.1s ease;
+}
+
+/* ROTATING RINGS & DOTS */
+.cursor-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform is handled by animation */
+    border-radius: 50%;
+    border: 1px solid var(--color-primary-variant);
+}
+
+.cursor-ring.one {
+    width: 100%;
+    height: 100%;
+    animation: cursor-rotate 10s linear infinite;
+}
+
+.cursor-ring.two {
+    width: 150%;
+    height: 150%;
+    animation: cursor-rotate 15s linear infinite reverse;
+}
+
+.cursor-ring.three {
+    width: 200%;
+    height: 200%;
+    animation: cursor-rotate 20s linear infinite;
+}
+
+.cursor-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    top: -4px; /* Half of height to sit on the border */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+@keyframes cursor-rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

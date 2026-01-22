@@ -1,24 +1,22 @@
-header{
+header {
     height: 100vh;
     padding-top: 5rem;
-   
-   
 }
-.header_container{
+
+.header_container {
     height: 100%;
     text-align: center;
     position: relative;
 }
 
-.cta{
-    margin-top:  2.5rem ;
+.cta {
+    margin-top: 2.5rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
-
 }
 
-.headersocials{
+.headersocials {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,66 +24,50 @@ header{
     position: absolute;
     left: 0;
     bottom: 3rem;
-   
 }
-.headersocials::after{
+
+.headersocials::after {
     content: "";
     width: 1px;
     height: 2rem;
     background-color: var(--color-primary);
 }
-.me{
-    background: linear-gradient(var(--color-primary), transparent);
+
+/* ================== ME SECTION (CENTERED CIRCLE) ================ */
+.me {
     width: 22rem;
     height: 22rem;
-    position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    animation: animate 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
-}
-@keyframes animate {
-   0%{
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-   
-   }
+    position: relative;
+    margin: 4rem auto 0;
+    display: flex;
     
-   
-   50%{
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-   
-   }
-   
-   100%{
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-   
-   }
-  
+    justify-content: center;
+    align-items: center;
 }
-.ME{
+
+.me-image {
+    width: 18rem;
+    height: 18rem;
+    overflow: hidden;
+    border-radius: 50%; /* Perfect circle */
+    background: linear-gradient(var(--color-primary), transparent);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid var(--color-bg);
+    position: relative;
+}
+
+.ME {
+    width: 100%;
     height: 100%;
-    animation: animate2 7s ease-in-out infinite;
-    box-shadow: 0 5px 10px var(--color-bg);
+    object-fit: cover;
+    display: block;
     
 }
-@keyframes animate2 {
-  0%{
-    border-radius: 80% 40% 30% 60% / 60% 40% 70% 30%;
-   
-   }
-    
-   
-   50%{
-    border-radius: 40% 70% 60% 30% / 70% 30% 50% 40%;
-   
-   }
-   
-   100%{
-    border-radius: 80% 40% 30% 60% / 60% 40% 70% 30%;
-   
-   }
-}
-.scroll_down{
+
+.scroll_down {
     position: absolute;
     right: -2.3rem;
     bottom: 5rem;
@@ -94,31 +76,122 @@ header{
     font-size: 0.9rem;
 }
 
-/*================== MEDIA QUERIES (MEDIUM DEVICES) ================*/
-@media screen  and (max-width:1024px) {
-  header{
-    height: 68vh;
-    overflow: visible;
-  }
-  
-
-  
+/* ================== ROTATING RINGS (ATOMIC EFFECT) ================ */
+.ring {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    /* Centering is handled inside the @keyframes rotate to prevent jumping */
+    border-radius: 50%;
+    border: 1.5px solid var(--color-primary-variant);
+    z-index: 1;
+    pointer-events: none;
 }
 
-/*================== MEDIA QUERIES (SMALLER DEVICES) ================*/
-@media screen  and (max-width:600px) {
-  header{
-    height: 85vh;
-    padding-top: 4rem;
-  }
-  .container{
-    width: var(--container-width-sm);
-    padding: 0;
-    
-  }
-  .headersocials, .scroll_down{
-    display: none;
-  }
-  
- 
+.dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--color-primary);
+}
+
+/* Position each of the four dots on the ring */
+.dot:nth-child(1) {
+    top: -6px; /* Half of height to sit on the border */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot:nth-child(2) {
+    top: 50%;
+    right: -6px; /* Half of height to sit on the border */
+    transform: translateY(-50%);
+}
+
+.dot:nth-child(3) {
+    bottom: -6px; /* Half of height to sit on the border */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot:nth-child(4) {
+    top: 50%;
+    left: -6px; /* Half of height to sit on the border */
+    transform: translateY(-50%);
+}
+
+/* 
+   The animation includes translate(-50%, -50%) 
+   to keep the rings centered while they rotate.
+*/
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.ring.one {
+    width: 20rem;
+    height: 20rem;
+    animation: rotate 12s linear infinite;
+}
+
+.ring.two {
+    width: 23rem;
+    height: 23rem;
+    animation: rotate 18s linear infinite reverse;
+}
+
+.ring.three {
+    width: 26rem;
+    height: 26rem;
+    animation: rotate 24s linear infinite;
+}
+
+/*================== MEDIA QUERIES ================*/
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+    .me {
+        width: 18rem;
+        height: 18rem;
+    }
+    .me-image {
+        width: 14rem;
+        height: 14rem;
+    }
+    .ring.one { width: 16rem; height: 16rem; }
+    .ring.two { width: 18.5rem; height: 18.5rem; }
+    .ring.three { width: 21rem; height: 21rem; }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 85vh;
+        padding-top: 4rem;
+    }
+    .container {
+        width: var(--container-width-sm);
+        padding: 0;
+    }
+    .headersocials, .scroll_down {
+        display: none;
+    }
+    .me {
+        width: 14rem;
+        height: 14rem;
+    }
+    .me-image {
+        width: 11rem;
+        height: 11rem;
+    }
+    .ring.one { width: 12.5rem; height: 12.5rem; }
+    .ring.two { width: 14.5rem; height: 14.5rem; }
+    .ring.three { width: 16.5rem; height: 16.5rem; }
 }

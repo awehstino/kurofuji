@@ -10,6 +10,8 @@ import Portfolios from "./components/portfolios/Portfolios.js"
 import Loader from "./components/loader/Loader.jsx"
 import { useEffect, useState } from "react"
 import aos from "aos"
+import Cursor from "./components/Cursor/Cursor.jsx"
+import Theme from "./components/Theme/Theme.jsx"
 import "aos/dist/aos.css"
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
    {
      //  loading ? <Loader/> :
           <>  
+           <Cursor />
+           <Theme />
            <Header />
            <Nav/>
            <About/>

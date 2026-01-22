@@ -31,17 +31,51 @@
 }
 
 .about_card{
-     background: var(--color-bg-variant);
-     border: 1px solid transparent;
+     background: transparent;
      border-radius: 1rem;
      text-align: center;
      padding: 2rem;
      transition: var(--transition);
+     position: relative;
+}
+
+/* Rotating Border Container */
+.card-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* The Rotating Dot/Tail */
+.card-border::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: conic-gradient(transparent 0deg, transparent 340deg, var(--color-primary) 360deg);
+    animation: rotate-border 4s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+/* Inner Background (Mask) */
+.card-border::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--color-bg-variant);
+    border-radius: 0.9rem;
+    z-index: 1;
 }
 
 .about_card:hover{
     background: transparent;
-    border-color: var(--color-primary);
     cursor: default;
 
 }
@@ -50,21 +84,74 @@
     color: var(--color-primary);
     font-size: 1.4rem;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
 
 }
 
 .about_card h5{
     font-size: 0.95rem;
+    position: relative;
+    z-index: 2;
 }
 
 
 .about_card small{
     font-size: 0.7rem;
     color: var(--color-light);
+    position: relative;
+    z-index: 2;
 }
 .about_content p {
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
+}
+
+/* ================== EXPERIENCE MODAL ================ */
+.about__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 35rem;
+    max-width: 30vw;
+    height: auto;
+    min-height: 110%;
+    background: var(--color-bg-variant);
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    animation: popOut 0.4s ease forwards;
+}
+
+@keyframes popOut {
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes rotate-border {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Reuse rotating border for Experience Section */
+.experience_frontend, .experience_backend, .portfolio_item, .testimonial, .contact_option {
+    background: transparent !important;
+    position: relative;
+    border-radius: 1rem;
+}
+
+.experience_frontend h3, .experience_backend h3, .experience_content, .portfolio_item-image, .portfolio_item h3, .portfolio_item-cta, .partner_avatar, .partner_name, .partner_review, .contact_option-icon, .contact_option h4, .contact_option h5, .contact_option a {
+    position: relative;
+    z-index: 2;
 }
 
 /*================== MEDIA QUERIES (MEDIUM DEVICES) ================*/

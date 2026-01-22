@@ -26,13 +26,15 @@ const Contact = () => {
       <div className="container contact_container">
         <div className="contact_options">
           <article  className="contact_option">
+            <div className="card-border"></div>
             <MdOutlineMail className="contact_option-icon"/>
             <h4>Email</h4>
-            <h5>Augusthne123@gmail.com</h5>
-            <a href="mailto:Augusthne123@mail.com">send a message</a>
+            <h5>augustinejohn@ciphernet.net</h5>
+            <a href="mailto:augustinejohn@ciphernet.net">send a message</a>
           </article>
 
           <article  className="contact_option">
+            <div className="card-border"></div>
             <RiMessengerLine className="contact_option-icon"/>
             <h4>Messenger</h4>
             <h5>Black Fugee</h5>
@@ -40,13 +42,15 @@ const Contact = () => {
           </article>
 
           <article  className="contact_option">
+            <div className="card-border"></div>
             <BsWhatsapp className="contact_option-icon"/>
             <h4>WhatsApp</h4>
-            <h5>Blackfugee</h5>
+            <h5>Kuro Fuji</h5>
             <a href="http://wa.me/+2348159277797">send a message</a>
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>
+          <input type="hidden" name="to_name" value="Augustine John" />
           <input  type="text" name="name" placeholder="Your Full Name"  required/>
           <input  type="email" name="email" placeholder="Your Email"  required/>
           <textarea  name="message"  rows="7" required placeholder="Your Message Here"></textarea>
