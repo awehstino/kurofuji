@@ -18,15 +18,15 @@ function App() {
   const [loading, setloading] = useState(true)
   useEffect(()=>{
    aos.init()
-  // fetch(" https://awehstino.github.io/my_portfolio/").then(response =>{
-    //  console.log(response)
+  fetch(" https://awehstino.github.io/kurofuji/").then(response =>{
+     console.log(response)
        setloading(false)
     }) 
- // },[])
+ },[])
   return (
     <>
    {
-     //  loading ? <Loader/> :
+      loading ? <Loader/> :
           <>  
            <Cursor />
            <Theme />
