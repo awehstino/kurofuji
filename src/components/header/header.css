@@ -79,8 +79,8 @@ header {
 /* ================== ROTATING RINGS (ATOMIC EFFECT) ================ */
 .ring {
     position: absolute;
-    /* top: 50%;
-    left: 50%; */
+    top: 50%;
+    left: 50%;
     /* Centering is handled inside the @keyframes rotate to prevent jumping */
     border-radius: 50%;
     border: 1.5px solid var(--color-primary-variant);
