@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kurofuji/static/css/main.1ad0ade1.css",
-    "main.js": "/kurofuji/static/js/main.0c0e3056.js",
+    "main.js": "/kurofuji/static/js/main.2ce84516.js",
     "static/js/453.088a6b9d.chunk.js": "/kurofuji/static/js/453.088a6b9d.chunk.js",
     "static/media/IMG_20230916_102030.jpg": "/kurofuji/static/media/IMG_20230916_102030.cb61c6b28b115afd7741.jpg",
     "static/media/IMG_20230204_170914.jpg": "/kurofuji/static/media/IMG_20230204_170914.b04a2e5a5540b717dfe6.jpg",
@@ -17,11 +17,11 @@
     "static/media/lucho.jpg": "/kurofuji/static/media/lucho.d3c9e811016cbbfcd52a.jpg",
     "index.html": "/kurofuji/index.html",
     "main.1ad0ade1.css.map": "/kurofuji/static/css/main.1ad0ade1.css.map",
-    "main.0c0e3056.js.map": "/kurofuji/static/js/main.0c0e3056.js.map",
+    "main.2ce84516.js.map": "/kurofuji/static/js/main.2ce84516.js.map",
     "453.088a6b9d.chunk.js.map": "/kurofuji/static/js/453.088a6b9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ad0ade1.css",
-    "static/js/main.0c0e3056.js"
+    "static/js/main.2ce84516.js"
   ]
 }
