@@ -6,7 +6,7 @@ const Services = () => {
  
   
   return (
-    <section id="services">
+    <section id="services" data-aos="fade-up">
       <h5>What I Offer</h5>
       <h2 >Services</h2>
       <div className="container services_container">

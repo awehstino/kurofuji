@@ -62,14 +62,14 @@ const data = [
 
 const Portfolios = () => {
   return (
-    <section id='portfolio'>
+    <section id='portfolio' data-aos="fade-up">
       <h5>My Works </h5>
       <h2>Portfolio</h2>
       <div className="container portfolio_container">
         {
           data.map(({id, image, title, github, demo}) => {
             return (
-              <article key={id} className='portfolio_item'>
+              <article key={id} className='portfolio_item' data-aos="zoom-in">
                 <div className="card-border"></div>
                 <div className="portfolio_item-image">
                   <img src={image} alt={title} />

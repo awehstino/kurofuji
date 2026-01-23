@@ -10,8 +10,8 @@ const Header = () => {
     <header id="home">
       <div className="container header_container">
         <div className="header__intro">
-          <h5>Hello I'm</h5>
-          <h1>Augustine John</h1>
+          <h5 data-aos="fade-down">Hello I'm</h5>
+          <h1 data-aos="zoom-out">Augustine John</h1>
           <h5 className="text-light">
             <TypeAnimation
               sequence={[
@@ -36,19 +36,19 @@ const Header = () => {
 
         <div className="me">
           {/* Orbital Rings with Dots */}
-          <div className="ring one">
+          <div className="ring one" data-aos="zoom-out">
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
           </div>
-          <div className="ring two">
+          <div className="ring two" data-aos="zoom-out">
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
           </div>
-          <div className="ring three">
+          <div className="ring three" data-aos="zoom-out">
             <div className="dot"></div>
             <div className="dot"></div>
             <div className="dot"></div>
@@ -56,7 +56,7 @@ const Header = () => {
           </div>
           
           {/* Centered Circular Image */}
-          <div className="me-image">
+          <div className="me-image" data-aos="fade-in">
             <img src={Me} alt="Augustine John" className="ME" />
           </div>
         </div>

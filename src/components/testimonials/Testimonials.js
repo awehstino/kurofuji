@@ -22,7 +22,7 @@ const Testimonials = () => {
      }
   ]
   return (
-    <section id="testimonials">
+    <section id="testimonials" data-aos="fade-up">
       <h5 >Review from partners</h5>
       <h2 >Testimonials</h2>
       <Swiper  className="container testimony_container"   modules={[ Pagination]}

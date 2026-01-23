@@ -14,7 +14,7 @@ const About = () => {
   const projectsText = "I have successfully completed over 4 projects, ranging from web applications to mobile apps. My portfolio showcases my ability to deliver robust, scalable, and user-friendly solutions using modern technologies.";
 
   return (
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h5 >Get To Know</h5>
       <h2 >About Me</h2>
       <div className="container about__container">
