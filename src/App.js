@@ -12,6 +12,8 @@ import { useEffect, useState } from "react"
 import aos from "aos"
 import Cursor from "./components/Cursor/Cursor.jsx"
 import Theme from "./components/Theme/Theme.jsx"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import PortfolioDetails from "./components/portfolios/PortfolioDetails"
 import "aos/dist/aos.css"
 
 function App() {
@@ -24,25 +26,32 @@ function App() {
     }) 
  },[])
   return (
-    <>
+    <BrowserRouter>
    {
       loading ? <Loader/> :
           <>  
            <Cursor />
            <Theme />
-           <Header />
-           <Nav/>
-           <About/>
-           <Experience/>
-           <Services/>
-           <Portfolios/>
-           <Testimonials />
-           <Contact />
-           <Footer/>          
+           <Routes>
+             <Route path="/" element={
+               <>
+                <Header />
+                <Nav/>
+                <About/>
+                <Experience/>
+                <Services/>
+                <Portfolios/>
+                <Testimonials />
+                <Contact />
+                <Footer/>
+               </>
+             } />
+             <Route path="/portfolio/:id" element={<PortfolioDetails />} />
+           </Routes>
           </>
       }
     
-    </>
+    </BrowserRouter>
   )
  
 }
