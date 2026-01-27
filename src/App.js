@@ -33,7 +33,7 @@ function App() {
            <Cursor />
            <Theme />
            <Routes>
-             <Route path="/" element={
+             <Route path="/kurofuji/" element={
                <>
                 <Header />
                 <Nav/>
