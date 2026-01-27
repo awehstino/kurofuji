@@ -21,7 +21,7 @@ const PortfolioDetails = () => {
             <h2>{portfolio.title}</h2>
             <p>{portfolio.description}</p>
             <div className="portfolio__details-cta">
-              <Link to="/" className='btn'>Back</Link>
+              <Link to="/kurofuji" className='btn'>Back</Link>
               <a href={portfolio.github} className='btn' target="_blank" rel="noreferrer">Github</a>
               <a href={portfolio.demo} className='btn btn-primary' target="_blank" rel="noreferrer" onClick={(e) => {
                 if (!portfolio.demo) {
